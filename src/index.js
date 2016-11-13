@@ -1,5 +1,19 @@
 'use strict';
 
+var billing = [
+    1,650.50,
+    1,253.75,
+    1,312.60,
+    1,486.55,
+    1,554.30,
+    1,653.50,
+    1,450.45,
+    1,650.40,
+    1,435.50,
+    1,712.40,
+    1,849.50
+];
+
 exports.handler = function (event, context) {
     try {
         console.log("event.session.application.applicationId=" + event.session.application.applicationId);
@@ -74,8 +88,8 @@ function onIntent(intentRequest, session, callback) {
     }
 
     // dispatch custom intents to handlers here
-    if ("BillingIntent" === intentName) {
-        handleBillingRequest(intent, session, callback);
+    if ("LatestBillingIntent" === intentName) {
+        handleLatestBillingRequest(intent, session, callback);
     } else if ("DontKnowIntent" === intentName) {
         handleUnsupportedRequest(intent, session, callback);
     } else if ("AMAZON.YesIntent" === intentName) {
@@ -126,7 +140,7 @@ function getWelcomeResponse(callback) {
         buildSpeechletResponse(CARD_TITLE, speechOutput, repromptText, shouldEndSession));
 }
 
-function handleBillingRequest(intent, session, callback) {
+function handleLatestBillingRequest(intent, session, callback) {
     // Ensure that session.attributes has been initialized
     if (!session.attributes) {
         session.attributes = {};
@@ -135,7 +149,9 @@ function handleBillingRequest(intent, session, callback) {
     // Set a flag to track that we're in the Help state.
     session.attributes.userPromptedToContinue = true;
 
-    var speechOutput = "Your bill for the month is 1,000 pesos. ",
+    var now = new Date();
+    var monnow = now.getMonth();
+    var speechOutput = "Your bill for the month is " + billing[monnow] + " pesos. ",
         repromptText = speechOutput,
         shouldEndSession = false;
 

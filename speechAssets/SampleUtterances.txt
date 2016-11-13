@@ -1,19 +1,22 @@
-BillingIntent my bill
-BillingIntent my billing
-BillingIntent latest bill
-BillingIntent latest billing
-BillingIntent what is my bill
-BillingIntent what is my billing
-BillingIntent what is my latest bill
-BillingIntent what is my latest billing
-BillingIntent how much is my bill
-BillingIntent how much is my billing
-BillingIntent how much is my latest bill
-BillingIntent how much is my latest billing
-BillingIntent give me my bill
-BillingIntent give me my billing
-BillingIntent give me latest bill
-BillingIntent give me latest billing
+LatestBillingIntent my bill
+LatestBillingIntent my billing
+LatestBillingIntent latest bill
+LatestBillingIntent latest billing
+LatestBillingIntent what is my bill
+LatestBillingIntent what is my billing
+LatestBillingIntent what is my latest bill
+LatestBillingIntent what is my latest billing
+LatestBillingIntent how much is my bill
+LatestBillingIntent how much is my billing
+LatestBillingIntent how much is my latest bill
+LatestBillingIntent how much is my latest billing
+LatestBillingIntent give me my bill
+LatestBillingIntent give me my billing
+LatestBillingIntent give me latest bill
+LatestBillingIntent give me latest billing
+LatestBillingIntent how much do i have to pay
+LatestBillingIntent how much do i have to pay for the latest month
+LatestBillingIntent how much do i have to pay for this month
 
 DontKnowIntent i don't know
 DontKnowIntent don't know
